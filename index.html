@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floco de neve</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="styles/style-carla.css">
+    <link rel="stylesheet" href="styles/style-elias.css">
+    <link rel="stylesheet" href="styles/style-henderson.css">
+    <link rel="stylesheet" href="styles/style-john.css"> -->
+</head>
+
+<body>
+    <header class="cabecalho">
+
+        <a href="index.html"><img class="logo" src="./imagens/logo-removebg-preview.png" alt="logo"></a>
+        <div class="direita">
+            <a href="" class="sacola-icon"><img class="sacola" src="./imagens/shopping-bag-regular-24.png"
+                    alt="sacola-compras"></a>
+            <div class="menu">
+                <input type="checkbox" id="checkbox-menu" class="container__botao">
+                <label for="checkbox-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="menu__lista">
+                    <ul class="menu-lista__item">
+                        <li class="menu__item">
+                            <div class="menu-lista__link">Home</div>
+                        </li>
+                        <li class="menu__item">
+                            <div class="menu-lista__link">Gelato</div>
+                        </li>
+                        <li class="menu__item">
+                            <div class="menu-lista__link">Paletas</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="inutil"></div>
+    <main>
+        <!-- html henderson -->
+        <section class="page1">
+            <div class="apresentacao">
+                <div class="texto-apresentacao">
+                    <h2 class="apresentacao_titulo">Lorem ipsum</h2>
+                    <p class="apresentacao_texto">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+                        laying out print, graphic or web designs.</p>
+                </div>
+                <img class="apresentacao_imagem" src="./imagens/img-henderson1.jpeg" alt="">
+            </div>
+            <div class="produto">
+                <h1 class="produto_titulo">Produtos</h1>
+                <div class="produto_card">
+                    <img src="./imagens/img-henderson2.jpeg" class="produto-imagem">
+                </div>
+                <button class="btn-monte-seu-pedido">Monte seu gelato</button>
+                <button class="btn-monte-seu-paleta">Escolha sua paleta</button>
+            </div>
+        </section>
+        <!-- fim html henderson -->
+
+        <!--html john-->
+        <section class="sorvete">
+            <div class="sorvete_sabores">
+                <h1 class="sorvete_titulo">Sabores</h1>
+                <div class="sorvete_montagem">
+                    <div class="soverte-montagem_sabores">
+                        <input class="inputsov1" value="1" name='slide' type="radio" checked>
+                        <input class="inputsov2" value="2" name='slide' type="radio">
+                        <input class="inputsov3" value="3" name='slide' type="radio">
+                        <input class="inputsov4" value="4" name='slide' type="radio">
+                        <div class="sorvete_sabor">
+                            <div class="sorvete_chocolate"><span class="sorvetetexto">Chocolate: R$6,00</span>
+                                <img class="chocolate"
+                                    src="./imagens/john-chocolate.jpeg">
+                            </div>
+                            <div class="sorvete_morango"><span class="sorvetetexto">Morango: R$6,00</span>
+                                    <img class="morango"
+                                    src="./imagens/john-morango.jpeg"></div>
+                            <div class='sorvete_flocos'><span class="sorvetetexto">Flocos: R$6,00</span><img class="flocos"
+                                    src="./imagens/john-flocos.jpeg"></div>
+                            <div class="sorvete_creme"><span class="sorvetetexto">Creme: R$6,00</span><img class="creme" src="./imagens/john-creme.jpeg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quantidade-sorvete">
+                        <button class="button-quantidade-sorvete">-</button><span>0</span><button
+                            class="button-quantidade-sorvete">+</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sorvete_recipientes">
+                <div class="margin_div">
+                    <input type="radio" name="recipiente" id="1" >
+                    <img src="./imagens/john-casquinha.jpeg" class='icon' alt="">
+                    <label class="texto" for="1">Casquinha</label>
+                </div>
+                <div class="margin_div">
+                    <input type="radio" name="recipiente" id="2">
+                    <img src="./imagens/john-cascao.jpeg" class="icon" alt="">
+                    <label for="2">Cascao</label>
+                </div>
+                <div class="margin_div">
+                    <input type="radio" name="recipiente" id="3">
+                    <img src="./imagens/john-copinho.jpeg" class="icon" alt="">
+                    <label for="3">Copinho</label>
+                </div>
+            </div>
+
+            <!-- aqui fica escolha de recipiente -->
+            <!--html carla-->
+            <div class="sorvete_ingredientes">
+                <p class="titulo_cobertura"><b>Coberturas:</b></p>
+                <div class="conteiner-form-coberturas">
+                    <div class="input-coberturas">
+                        <input type="checkbox" name="chocolate" id="1">
+                        <img class="opcoes__cobertura" src="./imagens/carla-chocolate.jpeg" alt="">
+                        <label for="scales"> Chocolate</label>
+
+                    </div>
+                    <div class="input-coberturas">
+                        <input type="checkbox" name="morango" id="1">
+                        <img class="opcoes__cobertura" src="./imagens/carla-morango.jpeg" alt="">
+                        <label for="scales"> Morango</label>
+
+                    </div>
+                    <div class="input-coberturas">
+                        <input type="checkbox" name="leite condensado" id="3">
+                        <img class="opcoes__cobertura" src="./imagens/carla-leite-condensado.jpeg" alt="">
+                        <label for="scales"> Leite condensado</label>
+                    </div>
+                </div>
+            </div>
+            <!--fim html carla-->
+
+        </section>
+        <!--fim html john-->
+
+        <!-- html elias-->
+        <section class="paletas">
+
+            <div class="paletas-titulo">
+                <h1 class="paletas__titulos">Paletas</h1>
+            </div>
+
+            <div class="paletas_sabores">
+
+                <img src="./imagens/elias1-morango.jpeg" alt="" class="paleta__imagem">
+
+                <div class="paleta-menu__selecao">
+
+                    <h2 class="paleta-menu__titulo">Morango:</h2>
+
+                    <div class="paleta-menu__botoes">
+                        <button class="paleta-menu_menos menu_botoes">-</button>
+
+                        <p class="paleta-menu__display">0</p>
+
+                        <button class="paleta-menu_mais menu_botoes">+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h1 class="paletas_titulos"></h1>
+
+            <div class="paletas_sabores">
+
+                <img src="./imagens/elias2-chocolate.jpeg" alt="" class="paleta__imagem">
+
+                <div class="paleta-menu__selecao">
+
+                    <h2 class="paleta-menu__titulo">Chocolate:</h2>
+
+                    <div class="paleta-menu__botoes">
+                        <button class="paleta-menu_menos menu_botoes">-</button>
+
+                        <p class="paleta-menu__display">0</p>
+
+                        <button class="paleta-menu_mais menu_botoes">+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h1 class="paletas_titulos"></h1>
+
+            <div class="paletas_sabores">
+
+                <img src="./imagens/elias3-limao.jpeg" alt="" class="paleta__imagem">
+
+                <div class="paleta-menu__selecao">
+
+                    <h2 class="paleta-menu__titulo">Limão:</h2>
+
+                    <div class="paleta-menu__botoes">
+                        <button class="paleta-menu_menos menu_botoes">-</button>
+
+                        <p class="paleta-menu__display">0</p>
+
+                        <button class="paleta-menu_mais menu_botoes">+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h1 class="paletas_titulos"></h1>
+
+            <div class="paletas_sabores">
+
+                <img src="./imagens/elias4-abacaxi.jpeg" alt="" class="paleta__imagem">
+
+                <div class="paleta-menu__selecao">
+
+                    <h2 class="paleta-menu__titulo">Abacaxi:</h2>
+
+                    <div class="paleta-menu__botoes">
+                        <button class="paleta-menu_menos menu_botoes">-</button>
+
+                        <p class="paleta-menu__display">0</p>
+
+                        <button class="paleta-menu_mais menu_botoes">+</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- fim html elias -->
+
+    </main>
+    <footer class="rodape">
+        <div class="rodape__box">
+            <h2>Funcionamento:</h2>
+            <ul>
+                <li><a href="">Teste</a></li>
+                <li><a href="">Teste</a></li>
+                <li><a href="">Teste</a></li>
+            </ul>
+        </div>
+        <div class="rodape__box">
+            <ul>
+                <li><a href="">Teste</a></li>
+                <li><a href="">Teste</a></li>
+                <li><a href="">Teste</a></li>
+            </ul>
+        </div>
+        <div class="rodape__box">
+            <ul>
+                <li><a href="">Teste</a></li>
+                <li><a href="">Teste</a></li>
+                <li><a href="">Teste</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

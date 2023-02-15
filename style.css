@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2? família=Inter:wght@400;700&display=swap');
+
+body{
+    height: 100vh;
+}
+.page1{
+    display: block;
+}
+.sorvete{
+    display: none;
+}
+.paletas{
+    display: none;
+}
+.cabecalho{
+    background-color: #595959;
+    padding: .8em;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+.logo{
+    background:none;
+    margin-top: 0.5em;
+    width: 6em;
+    height: 2em;
+}
+.direita{
+    display: flex;
+    align-items: center;
+    margin-right: 1.25rem;
+}
+.sacola-icon{
+    margin: 0 0.625rem;
+}
+.sacola{
+    width: 2rem;
+    height: 2.5rem;
+}
+.menu__lista{
+    display: none;
+    
+    top: 4.375rem;
+    right: 1.25rem;
+    width: 12.5rem;
+    border: 1px solid #ffffff;
+    background: #595959;
+    padding: 1em;
+}
+
+.menu__item{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.menu-lista__link{
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+.container__botao:checked ~ .menu__lista{
+    display: block;
+}
+
+/*inicio menu hamburguer*/
+.container{
+    height: 100vh;
+    display:grid ;
+    align-items: center;
+}
+/*fim menun hamburguer*/
+
+/*configuração do menu hamburguer*/
+#checkbox-menu{
+    position: absolute;
+    opacity: 0;
+}
+
+label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 1.375rem;
+    width: 1.875rem;
+}
+
+label span{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #F2F2F2;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1){
+    top: 0;
+}
+
+
+label span:nth-child(2){
+    top: 8px;
+}
+
+
+label span:nth-child(3){
+    top: 16px;
+}
+/*fim da configuração do menu hamburguer*/
+
+/*animação*/
+#checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2){
+    opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top: 8px;
+}
+/*fim animação*/
+
+/* rodapé*/
+footer{
+    background-color: #595959;
+    width: 100vw;
+    height: 5em;
+    bottom: 0em;
+    
+}
+/*fim do rodapé */
+
+/* CSS HENDERSON */
+
+:root{
+    font-family: 'Oswald', sans-serif;
+    --cor-branco: #f2f2f2;
+    --cor-azul:#C4EEF2;
+    --cor-azul-fundo:#6CC5D9;
+    --cor-preto:#595959;
+}
+
+.apresentacao{
+    background: var(--cor-branco);
+    display: flex;
+    width: auto;
+    height: 33vh;
+    justify-content: space-around;  
+    align-items: center; 
+    text-align: center;
+}
+
+.inutil{
+    height: 5rem;
+}
+
+.texto-apresentacao{
+    width: 45%;
+}
+
+.apresentacao_titulo{
+    font-size: 1.3em;
+    color: var(--cor-preto);
+}
+
+.apresentacao_texto{
+    font-size: 0.8em;
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+    
+}
+
+.apresentacao_imagem{
+   width: 45%;
+   height: 80%;
+   padding: 0.5em;
+   
+}
+
+.produto{
+ 
+ height: 67vh;
+ background: var(--cor-azul);
+ text-align: center;
+ display: flex;
+ justify-content: space-around;
+ flex-direction: column;
+ align-items:center ;
+}
+
+.produto_titulo{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cor-preto);
+    margin-top: 1em;
+}
+
+.produto_card{
+    width: 100%;
+    height: 50%;
+    background:var(--cor-azul-fundo);
+    display: flex;
+    align-items: center;
+}
+
+.produto-imagem{
+    align-self: center;
+    height: 80%;
+    width: 100%;
+
+}
+
+.btn-monte-seu-pedido, .btn-monte-seu-paleta{
+    text-align: center;
+    width: 50%;
+    box-shadow: 5px 5px 2px #595959;
+    color:var(--cor-preto);
+    font-size: 15px;
+    padding: 1em;
+    background-color: var(--cor-branco);
+    border-radius: 15px;
+}
+
+/*FIM CSS HENDERSON*/
+
+/*CSS ELIAS*/
+.paletas {
+    align-items: center;
+    background-color: #6CC5D9;
+    margin: auto;
+    padding-bottom: 20px;
+    font-family: 'Oswald';
+}
+
+.paletas-titulo {
+    background-color: #f2f2f2;
+    font-size: 20px;
+    text-transform: uppercase;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+}  
+
+.paletas__titulos {
+    font-weight: 600;
+    font-size: 20px;
+    color: #595959;
+}
+
+.paleta-menu__titulo {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.paleta-menu__botoes {
+    display: flex;
+    font-size: 20px;
+    margin-top: 20px;
+    
+}
+
+.paleta__imagem {
+    margin-left: 30px;
+}
+
+.paleta-menu__selecao {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 20px;
+    
+}
+
+.paletas_sabores {
+    display: flex;
+    background-color: #f2f2f2;
+    Width:250px;
+    Height:93px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px #00000077; 
+}
+
+.paleta-menu__display {
+    margin: 0 10px;
+}
+
+.menu__botoes {
+    border: none;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    min-height: 6em;
+    background-color: #595959;
+    display: flex;
+    
+}
+
+footer .rodape__box{
+    width: 320px;
+    min-height: 150px;
+    padding: 20px;
+}
+
+footer .rodape__box:nth-child(4){
+    width: 400px;
+}
+
+.rodape__box h2{
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+/* fim footer */
+
+/*FIM CSS ELIAS*/
+
+/*CSS JOHN*/
+
+.chocolate, .morango, .flocos, .creme {
+    height: 13em;
+    width: 100%;
+    box-shadow: 0px 15px 25px;
+    margin-top: 0;
+}
+
+.sorvete{
+    width: 100vw;
+    height: 100vh;
+    margin-top: 1rem;
+}
+
+.sorvete_recipientes{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.sorvete_titulo{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2em;
+    color:#595959;
+}
+
+.icon{
+    width: 2em;
+    height: 2em;
+    margin: 4px;
+}
+
+.soverte-montagem_sabores {
+    overflow: hidden;
+    width: 100vw;
+    background-color: #6cc5d9;
+    padding-bottom: 3em;
+}
+
+.soverte-montagem_sabores>.sorvete_sabor {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100vw;
+    transition: all 1000ms ease;
+}
+
+.soverte-montagem_sabores>.sorvete_sabor>.sorvete_chocolate,
+.sorvete_morango,
+.sorvete_flocos,
+.sorvete_creme {
+    flex: 0 0 auto;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.soverte-montagem_sabores>input:nth-child(1):checked~.sorvete_sabor {
+    transform: translateX(0%);
+}
+
+.soverte-montagem_sabores>input:nth-child(2):checked~.sorvete_sabor {
+    transform: translateX(-100%);
+}
+
+.soverte-montagem_sabores>input:nth-child(3):checked~.sorvete_sabor {
+    transform: translateX(-200%);
+}
+
+.soverte-montagem_sabores>input:nth-child(4):checked~.sorvete_sabor {
+    transform: translateX(-300%);
+}
+
+.sorvetetexto{
+    top: 12em;
+    position: relative;
+    left: 12em;
+    background-color: #2d7080c0;
+    color: #f2f2f2;
+    padding: .4em;
+    border-radius: 8px;
+
+}
+
+.margin_div {
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+}
+
+.inputsov1, .inputsov2, .inputsov3, .inputsov4 {
+    position:relative;
+    display: inline-block;
+    top: 16.5rem;
+}
+
+.quantidade-sorvete{
+    display: flex;
+    position: relative;
+    top: -35px;
+    left: 250px;
+    background-color: #c4eef2;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    
+}
+
+.button-quantidade-sorvete{
+    margin: 0px 15px;
+    font-size: large;
+    background-color: #c4eef2;
+    border: none;
+}
+
+/*FIM CSS JOHN*/
+
+/*CSS CARLA*/
+
+.opcoes__cobertura {
+    display: inline-flex;
+    width:50px;
+    height:50px;
+    
+}
+
+.input-coberturas{
+    display: flex;
+    align-items: center;
+}
+
+.conteiner-form-coberturas {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 2em;
+}
+
+.titulo_cobertura {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/*FIM CSS CARLA*/
