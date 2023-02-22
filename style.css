@@ -133,7 +133,126 @@ label span:nth-child(3){
 /*fim animação*/
 
 /* rodapé*/
-
+footer {
+    background-color: #595959;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rodape__box {
+    width: auto;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    height: 75px;
+  }
+  
+  .copyright {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .rodape__div2 {
+    width: 50%;
+    min-height: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rodape__imagem {
+    width: 40px;
+    height: 10px;
+    margin-right: 10px;
+  }
+  
+  .list1 {
+    /* margin: 10px 10px; */
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  .list2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .list3 {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .list3 a{
+      padding-left: 7px;
+  }
+  
+  .list4 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .list3-imagem__position{
+      
+  }
+  
+  .list3__imagem {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .list3__endereco1 {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+  }
+  
+  .copyright__title {
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 20px;
+  }
+  
+  .title__first{
+      color: #fff;
+      margin-bottom: 5px;
+      margin-top: 10px;
+      text-align: center;
+  }
+  
+  .title__second{
+      color: #fff;
+      margin-bottom: 5px;
+      /* text-align: center; */
+  }
+  
+  .title__third{
+      color: #fff;
+      margin-bottom: 5px;
+      margin-top: 15px;
+      text-align: left;
+  }
+  
+  .box ul li {
+    margin: 10px 0px;
+    list-style: none;
+  }
+  
+  .box ul li a {
+    color: #ddd;
+    text-decoration: none;
+  }
+  
+  .box ul li a:hover {
+    color: #6cc5d9;
+  }
 /*fim do rodapé */
 
 /* CSS HENDERSON */
@@ -344,29 +463,6 @@ label span:nth-child(3){
 .menu__botoes {
     border: none;
 }
-
-/* footer */
-footer {
-    width: 100vw;
-    background-color: #595959;
-    display: flex;
-    
-}
-
-footer .rodape__box{
-    width: 320px;
-    padding: 20px;
-    margin-top: 0em;
-}
-
-
-
-.rodape__box h2{
-    color: #fff;
-    margin-bottom: 5px;
-}
-
-/* fim footer */
 
 /*FIM CSS ELIAS*/
 
