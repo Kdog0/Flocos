@@ -1,22 +1,19 @@
 const botaoMonteSeuPedido = document.querySelector('.btn-monte-seu-pedido')
 const botaoEscolhaPaleta = document.querySelector('.btn-monte-seu-paleta')
 const arraySabores = document.getElementsByName('slide')
-const recipientes = document.getElementsByClassName('sorvete_recipientes')
+const recipientes = document.getElementsByName('recipiente')
 const selecionandoSaborMais = document.querySelector('.button-quantidade-sorvete-mais')
 const selecionandoSaborMenos = document.querySelector('.button-quantidade-sorvete-menos')
 const selecionandoRecipientes = document.getElementsByClassName('sorvete_recipientes')
+const corbeturas = document.getElementsByClassName('1')
 const desapareceTela = document.querySelector('.page1')
 const apareceTela2 = document.querySelector('.sorvete')
 const apareceTela3 = document.querySelector('.paletas')
 var sabor = [];
 
 
+
 //criando classe de objeto sorvete
-class montagem {
-    constructor(sabor) {
-        this.sabor = sabor
-    }
-}
 
 //Recebe o valor do sabor
 const trasformandoObjeto = () => {
@@ -29,23 +26,40 @@ const trasformandoObjeto = () => {
     }
     return sabor
 }
-var sacola = {
+
+var produtosorvete = {
+    sabor: "",
+    recipiente: "",
+    corbetura: "",
 }
+
 //Montando sorvete
 function adicionandoValor() {
     if (sabor.length <= 3) {
         trasformandoObjeto()
-        sorvete = new montagem(sabor)
-
+        adcionaRecipiente()
+        adcionarCorbertura()
+        produtosorvete.sabor = sabor
     }
-    var sacola = {
-        sabor: sorvete,
-        quantidade: "",
-        recipientes: "",
-        corbetura: "",
-    };
-    console.log(sacola);
-    return sorvete
+    console.log(produtosorvete)
+    return
+}
+
+function adcionarCorbertura(){
+    for(i=0; i<corbeturas.length; i++){
+        if(corbeturas[i].checked){
+            produtosorvete.corbetura = corbeturas[i].value
+        }
+    }return
+}
+
+function adcionaRecipiente() {
+    for (i = 0; i < recipientes.length; i++) {
+        if (recipientes[i].checked) {
+            produtosorvete.recipiente = recipientes[i].value
+        }
+    }
+    return
 }
 
 //quantidade removida
