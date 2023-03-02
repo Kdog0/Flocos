@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2? família=Inter:wght@400;700&display=swap');
 
+:root{
+    --font-family: 'Oswald', sans-serif;
+    --cor-branco: #f2f2f2;
+    --cor-azul:#C4EEF2;
+    --cor-azul-fundo:#6CC5D9;
+    --cor-preto:#595959;
+}
+
 body{
     height: 100vh;
+    font-family: var(--font-family);
+    background-color: #6CC5D9;
 }
 .page1{
     display: block;
@@ -12,8 +22,175 @@ body{
 .paletas{
     display: none;
 }
+
+.btn-fecha{
+    margin: auto;
+}
+
+.pagFinalizarCompra {
+    height: 28rem;
+    width: 60vw;
+    font: inherit;
+    background-color: var(--cor-azul);
+    flex-direction: column;
+    position: absolute;
+    right: 1.6em;
+    display: none;
+}
+
+.calcularFrete {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0px;
+    background-color: var(--cor-branco);
+}
+
+.calcularF {
+    margin: 5px 0px 2px 30px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.paidivCEP {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.informeCEP {
+    margin-left: 30px;
+    text-align: left;
+    font-size: 10px;
+}
+
+.butOk {
+    text-align: center;
+    font-size: 10px;
+    width: 25px;
+    height: 17px;
+    border: none;
+    color: var(--cor-branco);
+    background-color: #ffb800;
+}
+
+.CEP {
+    margin: 0px 5px;
+    height: 17px;
+    width: 74px;
+    border: none;
+    background-color: #D9D9D9;
+}
+
+.correiosImg {
+    width: 40px;
+    height: 40px;
+}
+
+.cartaoFormaDePagamento {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartaoDeBorda {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin: 5px;
+    height: 30px;
+    background-color: #ffffff;
+}
+
+.cartaoP {
+    font-size: 10px;
+}
+
+.bandeiraImg {
+    width: 70px;
+    height: 20px;
+}
+
+.pixImg {
+
+    width: 70px;
+    height: 30px;
+}
+
+.ponto {
+    margin: 5px;
+}
+
+.bandeirasCartao {
+    margin-left: 150px;
+    height: 110px;
+    width: 100px;
+}
+
+.resumoP {
+    display: flex;
+    flex-direction: column;
+}
+
+.resumoPedido {
+    margin-left: 60px;
+    font-size: 14px;
+}
+
+.resumo-DoPedido {
+    display: flex;
+    margin: 0px 10px 0px 60px;
+    text-align: center;
+    font-size: 9px;
+    color: var(--cor-preto);
+}
+
+.totalPedido {
+    justify-content: flex-end;
+    display: flex;
+    margin: 5px 10px 0px 60px;
+    text-align: right;
+    font-size: 10px;
+    color: black;
+}
+.linha0 {
+    display: flex;
+}
+
+.linha1 {
+    margin: 5px 0px 0px 60px;
+    text-align: left;
+    background-color: var(--cor-preto);
+    height: 1px;
+    width: 200px;
+}
+
+.bordaFinalizar {
+    display: flex;
+}
+
+.finalizar {
+    
+    font-size: 14px;
+    font-weight: bold;
+    background-color: var(--cor-branco);
+    height: 24px;
+    width: 100px;
+    margin: 10px 0px 0px 100px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+}
+#erro{
+    font-size: 5px;
+    text-align:  right;
+    margin-right: 38px;
+}
+
+
+
 .cabecalho{
-    background-color: #595959;
+    background-color: var(--cor-preto);
     padding: .8em;
     position: fixed;
     display: flex;
@@ -33,18 +210,18 @@ body{
     align-items: center;
     margin-right: 1.25rem;
 }
-.sacola-icon{
-    margin: 0 0.625rem;
-}
+
+
 .sacola{
     width: 2rem;
     height: 2.5rem;
+    margin: 0 2em;
 }
 .menu__lista{
     display: none;
     width: 7rem;
     border: 1px solid #ffffff;
-    background: #595959;
+    background: var(--cor-preto);
     padding-bottom: 1em;
     padding-top: 1em;
     position: absolute;
@@ -62,7 +239,7 @@ body{
 }
 .menu-lista__link:active {
     background-color: #f9f9f9;
-    color: #595959;
+    color: var(--cor-preto);
     cursor: pointer;
 }
 
@@ -76,7 +253,6 @@ body{
     align-items: center;
 }
 /*fim menun hamburguer*/
-
 /*configuração do menu hamburguer*/
 #checkbox-menu{
     position: absolute;
@@ -105,11 +281,9 @@ label span:nth-child(1){
     top: 0;
 }
 
-
 label span:nth-child(2){
     top: 8px;
 }
-
 
 label span:nth-child(3){
     top: 16px;
@@ -131,21 +305,9 @@ label span:nth-child(3){
     top: 8px;
 }
 /*fim animação*/
-
 /* rodapé*/
-
 /*fim do rodapé */
-
 /* CSS HENDERSON */
-
-:root{
-    font-family: 'Oswald', sans-serif;
-    --cor-branco: #f2f2f2;
-    --cor-azul:#C4EEF2;
-    --cor-azul-fundo:#6CC5D9;
-    --cor-preto:#595959;
-}
-
 .apresentacao{
     background: var(--cor-branco);
     display: flex;
@@ -158,6 +320,11 @@ label span:nth-child(3){
 
 .inutil{
     height: 5rem;
+    background-color: #6CC5D9;
+}
+
+.texto {
+    font-size: 22px;
 }
 
 .texto-apresentacao{
@@ -173,19 +340,16 @@ label span:nth-child(3){
     font-size: 0.8em;
     text-align: center;
     padding: 1em;
-    margin: 0;
-    
+    margin: 0;  
 }
 
 .apresentacao_imagem{
    width: 45%;
    height: 80%;
    padding: 0.5em;
-   
 }
 
 .produto{
- 
  height: 67vh;
  background: var(--cor-azul);
  text-align: center;
@@ -227,55 +391,78 @@ label span:nth-child(3){
     border-radius: 15px;
 }
 
-.modal-compras {
-    display: flex;
-    justify-content: space-between;
-    
-    height: 15rem;
-    width: 60vw;
-
-    background-color: #c4eef2;
-    border-radius: 10px;
-    color: #595959;
-    font-weight: 700;
-    font-size: 19px;
-
-    position: absolute;
-    right: 15px;
-
-    padding: 15px;
-
+.paletas {
+    align-items: center;
+    background-color: #6CC5D9;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
-.modal__preco {
+.sorvete-titulo {
+    font-size: 20px;
+    text-transform: uppercase;
+    height: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1em;
+    font-family: var(--font-family);
+}  
 
-    height: 30px;
-    width: 100px;
-    right: 10px;
-
-    position: absolute;
-    bottom: 50px;
-
-    border: none;
-    background-color: #FFF;   
+.sorvete-menu__titulo {
+    font-weight: 400;
+    font-size: 22px;
+    margin-right: 5px;
 }
 
-.modal-compras button {
-    height: 30px;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    border: none;
+.sorvete-menu__botoes {
+    display: flex;
+    width: 20%;
+    height: 20%;
+    margin-top: 15px;
+}
+
+.paleta__imagem {
+    margin-left: 30px;
+}
+
+.sorvete__imagem{
     border-radius: 10px;
-    font-weight: 500;   
+    margin: 10px;
+    width: 100px;
 }
 
+.sorvete-menu__selecao {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.sorvete_sabores {
+    display: flex;
+    background-color: #fffdfd;
+    Width:250px;
+    Height:93px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px #00000077; 
+}
+
+.sorvete-menu__display {
+    margin: 0 10px;
+}
+
+.sorvete__botoes {
+    border: none;
+}
+
+.modal-compras {
+    background-color: #6CC5D9;
+    height: 80vh;
+}
 
 /*FIM CSS HENDERSON*/
-
 /*CSS ELIAS*/
 .paletas {
     align-items: center;
@@ -293,7 +480,6 @@ label span:nth-child(3){
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3em;
 }  
 
 .paletas__titulos {
@@ -305,13 +491,14 @@ label span:nth-child(3){
 .paleta-menu__titulo {
     font-weight: 400;
     font-size: 22px;
+    margin-right: 60px;
 }
 
 .paleta-menu__botoes {
     display: flex;
-    font-size: 20px;
-    margin-top: 20px;
-    
+    font-size: 18px;
+    margin-top: 40px;  
+    margin-right: 50px; 
 }
 
 .paleta__imagem {
@@ -321,18 +508,16 @@ label span:nth-child(3){
 .paleta-menu__selecao {
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-    margin-top: 20px;
     
+    margin-top: 30px; 
 }
 
 .paletas_sabores {
     display: flex;
     background-color: #f2f2f2;
-    Width:250px;
-    Height:93px;
+    width:70vw;
     text-align: center;
-    margin: 20px auto;
+    margin: 4em auto;
     border-radius: 10px;
     box-shadow: 10px 5px 5px #00000077; 
 }
@@ -341,8 +526,17 @@ label span:nth-child(3){
     margin: 0 10px;
 }
 
-.menu__botoes {
-    border: none;
+.botao__paleta {
+    margin-left: 40px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.menu_botoes {
+    height: 20px;
+    width: 40px;
+    margin: 0 5px;
 }
 
 /* footer */
@@ -350,7 +544,6 @@ footer {
     width: 100vw;
     background-color: #595959;
     display: flex;
-    
 }
 
 footer .rodape__box{
@@ -359,133 +552,40 @@ footer .rodape__box{
     margin-top: 0em;
 }
 
-
-
 .rodape__box h2{
     color: #fff;
     margin-bottom: 5px;
 }
 
 /* fim footer */
-
 /*FIM CSS ELIAS*/
-
 /*CSS JOHN*/
-
-.sorvete_sabor{
-    margin: 0;
-    padding: 0;
-    height: auto;
-}
-
-.sorvete_montagem{
-    display: flex;
-    flex-direction: column;
-}
-
-.chocolate, .morango, .flocos, .creme {
-    height: 13em;
-    width: 100vw;
-    box-shadow: 0px 15px 25px;
-    position: relative;
-}
-
-.soverte-montagem_sabores {
-    overflow: hidden;
-    width: 100vw;
-    background-color: #6cc5d9;
-    padding-bottom: 3em;   
-}
-
-.soverte-montagem_sabores>.sorvete_sabor {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100vw;
-    transition: all 1000ms ease;
-}
-
-.soverte-montagem_sabores>.sorvete_sabor>.sorvete_chocolate,
-.sorvete_morango,
-.sorvete_flocos,
-.sorvete_creme {
-    flex: 0 0 auto;
-    width: 100vw;
-}
-
-.soverte-montagem_sabores>input:nth-child(1):checked~.sorvete_sabor {
-    transform: translateX(0%);
-}
-
-.soverte-montagem_sabores>input:nth-child(2):checked~.sorvete_sabor {
-    transform: translateX(-100%);
-}
-
-.soverte-montagem_sabores>input:nth-child(3):checked~.sorvete_sabor {
-    transform: translateX(-200%);
-}
-
-.soverte-montagem_sabores>input:nth-child(4):checked~.sorvete_sabor {
-    transform: translateX(-300%);
-}
-
-.inputsov1, .inputsov2, .inputsov3, .inputsov4 {
-    position:relative;
-    display: inline-flex;
-    top: 16.5rem;
-}
-
-.quantidade-sorvete{
-    display: flex;
-    position: relative;
-    bottom: 35px;
-    left: 250px;
-    background-color: #c4eef2;
-    width: 90px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;  
-}
-
-.button-quantidade-sorvete{
-    margin: 0px 15px;
-    font-size: large;
-    background-color: #c4eef2;
-    border: none;
-}
 
 .sorvete_recipientes{
     display: flex;
     flex-direction: column;
-  
-    margin-left: 2em;
-    margin-bottom: 2em;
-    
+    margin: 2em 2em;
+    padding: 1em 0;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.178);
 }
 
-.texto_recipientes{
+.sorvete-recipientes-titulo, .sorvete-cobertura-titulo{
     text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
 }
 
-.sorvete_titulo{
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 2em;
-    color:#595959;
+.margin_recepientes{
+    margin: 1em 0;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
 }
 
-.sorvetetexto{
-    top: 12em;
-    position: relative;
-    left: 12em;
-    background-color: #2d7080c0;
-    color: #f2f2f2;
-    padding: .4em;
-    border-radius: 8px;
-    z-index: 1;
-}
-
-.margin_recepientes {
-    margin: 0px;
+.input-coberturas {
+    margin: 1em 2em;
     padding: 0;
     display: flex;
     align-items: baseline;
@@ -495,32 +595,23 @@ footer .rodape__box{
     width: 2em;
     height: 2em;
     margin: 8px;
-}
+} */
 /*FIM CSS JOHN*/
 
 /*CSS CARLA*/
-.sorvete_ingredientes{
-    margin-bottom: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    margin-left: 2em;
-}
 
 .opcoes__cobertura {
-    display: inline;
-    width:50px;
-    height:50px;  
+
+    width: 2em;
+    height: 2em;
+    margin: 8px;
 }
 
-.input-coberturas{
-    display: flex;
-    align-items: center;
-}
-
-.titulo_cobertura {
-    text-align: center;
-    
+.btn-adiciona{
+    margin: 2em;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 10px;
 }
 
 /*FIM CSS CARLA*/
