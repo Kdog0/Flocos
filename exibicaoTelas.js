@@ -1,22 +1,17 @@
 const telaPageOne = document.querySelector('.page1')
 const telaPageSorvete = document.querySelector('.sorvete')
-const telaPagePaletas = document.querySelector('.paletas')
 const botaoMonteSeuPedido = document.querySelector('.btn-monte-seu-pedido')
-const botaoEscolhaPaleta = document.querySelector('.btn-monte-seu-paleta')
 const telaSacola = document.querySelector('.pagFinalizarCompra')
 const botaoMostraSacola = document.querySelector('.sacola-icon')
 
-
-botaoMonteSeuPedido.addEventListener("click",exibeTelaSorvete)
-botaoEscolhaPaleta.addEventListener("click",exibeTelaPaletas)
-botaoMostraSacola.addEventListener('click',exibeSacola)
-
-
 function exibeSacola(){
     telaSacola.style.display='block'
+    document.getElementById('btn-fecha').style.display = 'block'
 }
 
 function fechaSacola(){
+    
+    document.getElementById('btn-fecha').style.display = 'none'
     telaSacola.style.display='none'
 }
 
@@ -25,7 +20,11 @@ function exibeTelaSorvete() {
     telaPageSorvete.style.display = 'block'
 }
 
-function exibeTelaPaletas() {
-    telaPageOne.style.display = 'none'
-    telaPagePaletas.style.display = 'block'
+function exibeHome() {
+    telaPageOne.style.display = 'block'
+    telaPageSorvete.style.display = 'none'
 }
+
+
+botaoMonteSeuPedido.addEventListener("click",exibeTelaSorvete)
+botaoMostraSacola.addEventListener('click',exibeSacola)

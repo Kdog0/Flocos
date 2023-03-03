@@ -23,19 +23,20 @@ body{
     display: none;
 }
 
-.btn-fecha{
+.mfecha{
     margin: auto;
 }
 
 .pagFinalizarCompra {
     height: 28rem;
-    width: 60vw;
+    width: 200px;
     font: inherit;
     background-color: var(--cor-azul);
     flex-direction: column;
     position: absolute;
-    right: 1.6em;
+    right: 2.6em;
     display: none;
+    
 }
 
 .calcularFrete {
@@ -104,6 +105,8 @@ body{
 
 .cartaoP {
     font-size: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .bandeiraImg {
@@ -133,7 +136,7 @@ body{
 }
 
 .resumoPedido {
-    margin-left: 60px;
+    
     font-size: 14px;
 }
 
@@ -186,8 +189,6 @@ body{
     text-align:  right;
     margin-right: 38px;
 }
-
-
 
 .cabecalho{
     background-color: var(--cor-preto);
@@ -312,7 +313,7 @@ label span:nth-child(3){
     background: var(--cor-branco);
     display: flex;
     width: auto;
-    height: 33vh;
+    height: 38vh;
     justify-content: space-around;  
     align-items: center; 
     text-align: center;
@@ -338,14 +339,14 @@ label span:nth-child(3){
 
 .apresentacao_texto{
     font-size: 0.8em;
-    text-align: center;
-    padding: 1em;
+    text-align: left;
+    padding: 0.5em;
     margin: 0;  
 }
 
 .apresentacao_imagem{
    width: 45%;
-   height: 80%;
+   height: 60%;
    padding: 0.5em;
 }
 
@@ -374,13 +375,26 @@ label span:nth-child(3){
     align-items: center;
 }
 
+#btn-fecha{
+    display: none;
+    margin-top: 2em;
+}
+
+.escolhe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .produto-imagem{
     align-self: center;
     height: 80%;
     width: 100%;
 }
-
-.btn-monte-seu-pedido, .btn-monte-seu-paleta{
+.btn-monte-seu-paleta{
+    display: none;
+}
+.btn-monte-seu-pedido {
     text-align: center;
     width: 50%;
     box-shadow: 5px 5px 2px #595959;
@@ -389,13 +403,6 @@ label span:nth-child(3){
     padding: 1em;
     background-color: var(--cor-branco);
     border-radius: 15px;
-}
-
-.paletas {
-    align-items: center;
-    background-color: #6CC5D9;
-    margin: auto;
-    padding-bottom: 20px;
 }
 
 .sorvete-titulo {
@@ -459,7 +466,7 @@ label span:nth-child(3){
 
 .modal-compras {
     background-color: #6CC5D9;
-    height: 80vh;
+    height: 70vh;
 }
 
 /*FIM CSS HENDERSON*/
@@ -548,8 +555,10 @@ footer {
 
 footer .rodape__box{
     width: 320px;
-    padding: 20px;
-    margin-top: 0em;
+    height: 3em;
+    margin: 1em;
+    color: #D9D9D9;
+   
 }
 
 .rodape__box h2{
@@ -557,6 +566,10 @@ footer .rodape__box{
     margin-bottom: 5px;
 }
 
+.sacolacheia{
+    display: none;
+    position: absolute;
+}
 /* fim footer */
 /*FIM CSS ELIAS*/
 /*CSS JOHN*/
@@ -612,6 +625,12 @@ footer .rodape__box{
     height: 50px;
     font-size: 16px;
     border-radius: 10px;
+}
+
+.sacolaproduto{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
 }
 
 /*FIM CSS CARLA*/

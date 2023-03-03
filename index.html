@@ -11,57 +11,55 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="cabecalho">
         <a href="index.html"><img class="logo" src="./imagens/logo-removebg-preview.png" alt="logo"></a>
         <div class="direita">
+            <button id="btn-fecha" onclick="fechaSacola()">x</button>
             <div class="sacola-icon"><img class="sacola" src="./imagens/shopping-bag-regular-24.png"
                     alt="sacola-compras">
+
                 <div class='pagFinalizarCompra'>
-                    <button class="btn-fecha" onclick="fechaSacola()">x</button>
-                    <div class="calcularFrete">
-                        <p class="calcularF">Calcule Frete</p>
-                        <div class="paidivCEP">
-                            <p class="informeCEP">Informe o CEP</p>
-                            <input class="CEP" type="number" id="calcularCep">
-                            <!-- <button class="butOk">OK</button> -->
+                    
+                        <div class="cartaoFormaDePagamento">
+                            <div class="cartaoDeBorda">
+                                <input class="ponto" type="radio" name="seletor" value="cartao credito">
+                                <p class="cartaoP">Cartão de Crédito</p>
+
+                            </div>
+                            <div class="cartaoDeBorda">
+                                <input class="ponto" type="radio" name="seletor" value="cartao debito">
+                                <p class="cartaoP">Cartão de Débito</p>
+
+                            </div>
+                            <div class="cartaoDeBorda">
+                                <input class="ponto" type="radio" name="seletor" value="Dinheiro">
+                                <p class="cartaoP">Dinheiro</p>
+                            </div>
+                            <div class="cartaoDeBorda">
+                                <input class="ponto" type="radio" name="seletor" value="pix">
+                                <p class="cartaoP">Pix</p>
+                            </div>
                         </div>
-                        <div id="erro"></div>
-                    </div>
-                    <div class="cartaoFormaDePagamento">
-                        <div class="cartaoDeBorda">
-                            <input class="ponto" type="radio" name="seletor" value="cartao">
-                            <p class="cartaoP">Cartão de crédito</p>
-                            <img class="bandeiraImg" src="./img/bandeiras.png" alt="imagem cartão de crédito">
+                        <div class="resumoP">
+                            <div>
+                                <p class="resumoPedido"> Resumo do Pedido</p>
+                            </div>
+                            <div class="resumo-DoPedido">
+
+                            </div>
+                            <div class="linha0">
+                                <p class="linha1"></p>
+                            </div>
                         </div>
-                        <div class="cartaoDeBorda">
-                            <input class="ponto" type="radio" name="seletor" value="pix">
-                            <p class="cartaoP">Pix</p>
-                            <img class="pixImg" src="./img/019a2d16277d159cd2ef1298a4c60ab8.png" alt="">
+                        <div class="totalPedido">
+                            <p class="totalP">Total: R$</p>
+                            <p class="total">0,00</p>
                         </div>
-                    </div>
-                    <div class="resumoP">
-                        <div class="resumoPedido">
-                            <p> Resumo do Pedido</p>
-                        </div>
-                        <div class="resumo-DoPedido">
-                            <p>Produtos: .......................R$</p>
-                            <p>300,00</p>
-                        </div>
-                        <div class="resumo-DoPedido">
-                            <p>Frete: .............................R$</p>
-                            <p>900,00</p>
-                        </div>
-                        <div class="linha0">
-                            <p class="linha1"></p>
-                        </div>
-                    </div>
-                    <div class="totalPedido">
-                        <p class="totalP">Total: R$</p>
-                        <p>200,00</p>
-                    </div>
-                    <div class="bordaFinalizar"></div>
-                    <button class="finalizar">Finalizar</button>
+                        <div class="bordaFinalizar"></div>
+                        <button class="finalizar" onclick="window.location.reload()" >Finalizar</button>
+                    
                 </div>
             </div>
             <div class="menu">
@@ -74,15 +72,11 @@
                 <div class="menu__lista">
                     <ul class="menu-lista__item">
                         <li class="menu__item">
-                            <div class="menu-lista__link">Home</div>
+                            <div onclick="exibeHome()" class="menu-lista__link">Home</div>
                         </li>
                         <li class="menu__item">
-                            <div class="menu-lista__link">Gelato</div>
+                            <div onclick="exibeTelaSorvete()" class="menu-lista__link">Gelato</div>
                         </li>
-                        <li class="menu__item">
-                            <div class="menu-lista__link">Paletas</div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -94,9 +88,12 @@
 
             <div class="apresentacao">
                 <div class="texto-apresentacao">
-                    <h2 class="apresentacao_titulo">Lorem ipsum</h2>
-                    <p class="apresentacao_texto">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
-                        laying out print, graphic or web designs.</p>
+                    <h2 class="apresentacao_titulo">Floco de Neve</h2>
+                    <p class="apresentacao_texto">A Floco de Neve é sinônimo de qualidade e deliciosos sorvetes.
+                        Atualmente, além da variedade de sorvetes, a Floco de Neve conta também com um atendimento
+                        diferenciado.
+                        A Sorveteria Floco de Neve é assim: Produtos de qualidade, preços compatíveis, bom atendimento e
+                        inovação constante.</p>
                 </div>
                 <img class="apresentacao_imagem" src="./imagens/img-henderson1.jpeg" alt="">
             </div>
@@ -113,16 +110,12 @@
         <!--html john-->
         <section class="sorvete">
             <div class="modal-compras">
-                <!-- <p>Pedido</p>
-                <p>valor</p>
-                <div class="modal__preco">Valor Total</div>
-                <button type="submit">Finalizar compra</button> -->
-                <h1 class="sorvete-titulo">Sabores</h1>
+                <h1 class="sorvete-titulo">Sabores</h1></br><p class="escolhe">Selecione no maximo 4 bolas</p></h1>
                 <div class="sorvete_sabores">
                     <img src="./imagens/sorvete/john-morango.jpeg" alt="" class="sorvete__imagem">
                     <div class="sorvete-menu__selecao">
                         <h2 class="sorvete-menu__titulo">Morango:</h2>
-                        <div class="sorvete-menu__botoes" name="Morango" value="8.99">
+                        <div class="sorvete-menu__botoes" name="Morango">
                             <button class="morango-menu_menos menu_botoes">-</button>
                             <p class="sorvete-menu__display morango-contador">0</p>
                             <button class="morango-menu_mais menu_botoes" name="oi">+</button>
@@ -212,65 +205,13 @@
         </section>
         <!--fim html john-->
         <!-- html elias-->
-        <section class="paletas">
-            <div class="paletas-titulo">
-                <h1 class="paletas__titulos">Paletas</h1>
-            </div>
-            <div class="paletas_sabores">
-                <img src="./imagens/elias1-morango.jpeg" alt="" class="sorvete__imagem">
-                <div class="paleta-menu__selecao">
-                    <h2 class="paleta-menu__titulo">Morango:</h2>
-                    <div class="paleta-menu__botoes">
-                        <button class="paleta-menu_menos menu_botoes">-</button>
-                        <p class="paleta-menu__display">0</p>
-                        <button class="paleta-menu_mais menu_botoes">+</button>
-                    </div>
-                </div>
-            </div>
-            <h1 class="paletas_titulos"></h1>
-            <div class="paletas_sabores">
-                <img src="./imagens/elias2-chocolate.jpeg" alt="" class="sorvete__imagem">
-                <div class="paleta-menu__selecao">
-                    <h2 class="paleta-menu__titulo">Chocolate:</h2>
-                    <div class="paleta-menu__botoes">
-                        <button class="paleta-menu_menos menu_botoes">-</button>
-                        <p class="paleta-menu__display">0</p>
-                        <button class="paleta-menu_mais menu_botoes">+</button>
-                    </div>
-                </div>
-            </div>
-            <h1 class="paletas_titulos"></h1>
-            <div class="paletas_sabores">
-                <img src="./imagens/elias3-limao.jpeg" alt="" class="sorvete__imagem">
-                <div class="paleta-menu__selecao">
-                    <h2 class="paleta-menu__titulo">Limão:</h2>
-                    <div class="paleta-menu__botoes">
-                        <button class="paleta-menu_menos menu_botoes">-</button>
-                        <p class="paleta-menu__display">0</p>
-                        <button class="paleta-menu_mais menu_botoes">+</button>
-                    </div>
-                </div>
-            </div>
-            <h1 class="paletas_titulos"></h1>
-            <div class="paletas_sabores">
-                <img src="./imagens/elias4-abacaxi.jpeg" alt="" class="sorvete__imagem">
-                <div class="paleta-menu__selecao">
-                    <h2 class="paleta-menu__titulo">Abacaxi:</h2>
-                    <div class="paleta-menu__botoes">
-                        <button class="paleta-menu_menos menu_botoes">-</button>
-                        <p class="paleta-menu__display">0</p>
-                        <button class="paleta-menu_mais menu_botoes">+</button>
-                    </div>
-                </div>
-            </div>
-            <button class="botao__paleta">Adicionar Paleta</button>
-        </section>
-        <!-- fim html elias -->
+
     </main>
     <footer class="rodape">
         <div class="container">
-        <div class="rodape__box">
-            <h2>Funcionamento:</h2>
+            <div class="rodape__box">
+                <h2>Funcionamento:</h2>
+                <span>12:00hrs às 22:00hrs</span>
     </footer>
     <!-- <script src="app.js"></script> -->
     <script src="./exibicaoTelas.js"></script>
